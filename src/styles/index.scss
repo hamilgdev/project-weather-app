@@ -1,0 +1,15 @@
+// import components
+
+// Estilos base assets
+@import "base/reset.scss";
+
+// config assets
+@import "config/vars.css";
+
+// Estilos theme assets
+
+body {
+  h1 {
+    color: red;
+  }
+}
