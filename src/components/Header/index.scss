@@ -1,0 +1,40 @@
+.Header {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-semi);
+  background-image: url("../../assets/img/banner-bog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-accent-darker);
+    opacity: 0.6;
+  }
+
+  .ContentNameWeatcher {
+    margin: calc(var(--gutter) * 2);
+    color: var(--c-first-lighter-100);
+    position: relative;
+    z-index: var(--layer-page-z-index);
+
+    @media only screen and (min-width: 1024px) {
+      margin: calc(var(--gutter) * 4);
+    }
+
+    .NameWeatcher {
+      display: inline-flex;
+      align-items: center;
+      gap: calc(var(--gutter) / 2);
+      & h1 {
+        font-size: var(--fp-base);
+        font-weight: var(--regular);
+      }
+    }
+  }
+}

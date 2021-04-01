@@ -1,11 +1,12 @@
 import React from "react";
 
 import "./App.scss";
+import Header from "./components/Header";
 
 const App = () => {
   return (
     <main className="Main">
-      <section className="Header">Header</section>
+      <Header />
       <section className="SectionDays">SectionDays</section>
       <section className="SectionVisit">SectionVisit</section>
       <section className="SectionTop">SectionTop</section>
