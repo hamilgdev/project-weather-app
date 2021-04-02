@@ -3,8 +3,8 @@
   min-height: 100vh;
   display: grid;
   gap: calc(var(--gutter) * 2);
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 200px) repeat(4, minmax(0, 1fr));
   grid-template-areas:
     "Header"
     "SectionDays"
@@ -13,8 +13,10 @@
     "SectionAside";
 
   @media only screen and (min-width: 1024px) {
+    max-width: 1366px;
+    margin: 0 auto;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 300px) minmax(0, 1fr);
     grid-template-areas:
       "Header Header Header Header"
       "SectionDays SectionVisit SectionTop SectionAside";
@@ -27,6 +29,9 @@
 
 .SectionDays {
   grid-area: SectionDays;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gutter) * 2);
 }
 
 .SectionVisit {

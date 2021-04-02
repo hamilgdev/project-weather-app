@@ -31,9 +31,12 @@
       display: inline-flex;
       align-items: center;
       gap: calc(var(--gutter) / 2);
+      font-size: var(--fp-base);
       & h1 {
-        font-size: var(--fp-base);
         font-weight: var(--regular);
+      }
+      @media only screen and (min-width: 1024px) {
+        font-size: var(--fp-xxlarge);
       }
     }
   }

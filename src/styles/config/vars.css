@@ -3,10 +3,10 @@
 :root {
   /* COLOR PALETTE */
   /* Primary color */
-  --c-first-lighter-200: #84f5e6;
+  --c-first-lighter-200: #dbe9f6;
   --c-first-lighter-100: #7d68eb;
   --c-first-main: #31338a;
-  --c-first-darker-100: #075349;
+  --c-first-darker-100: #222361;
   /* second color */
   --c-second-lighter-100: #e8c970;
   --c-second-main: #dcae28;
@@ -58,7 +58,7 @@
   /* border radius */
   --border-radius-redonde: 50px;
   --border-radius-semi: 30px;
-  --border-radius-minor: 2px;
+  --border-radius-minor: 15px;
   /* Box shadow */
   --box-shadow: 0px 2px 8px var(--c-first-darker-100-25);
   --box-shadow-md: 0 4px 4px 0 var(--c-first-darker-100-25);

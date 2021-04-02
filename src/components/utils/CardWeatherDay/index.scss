@@ -1,0 +1,43 @@
+.CardWeatcher {
+  display: flex;
+  height: calc(var(--gutter) * 6);
+  border-radius: var(--border-radius-minor);
+  border: 1px solid var(--c-accent-lighter);
+  box-shadow: var(--box-shadow-xl);
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    width: calc(var(--gutter) * 4);
+  }
+  &--data {
+    align-self: center;
+    flex: 1;
+    font-family: var(--f-second);
+    &__day {
+      color: var(--c-accent-darker);
+      font-weight: var(--bold);
+      font-size: var(--fs-normal);
+    }
+    &__state {
+      font-size: var(--fs-small);
+    }
+  }
+  &--temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-minor);
+    background-color: var(--c-first-lighter-200);
+    box-shadow: var(--box-shadow-xl);
+    width: calc(var(--gutter) * 6);
+    color: var(--c-accent-darker);
+    &.currentDay {
+      background-color: var(--c-first-lighter-100);
+      color: var(--c-accent-lighter);
+    }
+    &__info {
+      font-weight: var(--bold);
+    }
+  }
+}

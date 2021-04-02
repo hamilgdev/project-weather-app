@@ -16,7 +16,7 @@ const Header = () => {
         ) : (
           <div className="NameWeatcher">
             <FaMapMarkerAlt />
-            <h1>{data.name}</h1>
+            <h1>{data.city.name}</h1>
           </div>
         )}
       </div>
