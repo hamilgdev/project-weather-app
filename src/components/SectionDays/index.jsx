@@ -27,7 +27,7 @@ const SectionDays = ({ data, loading }) => {
 
   return (
     <section className="SectionDays">
-      <h2>
+      <h2 className="SectionDays--title">
         <strong>3 Days</strong> Forecast
       </h2>
       <div className="SectionDays--cards">

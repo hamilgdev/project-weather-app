@@ -1,5 +1,10 @@
 .SectionDays {
+  &--title {
+    font-weight: var(--regular);
+  }
+
   &--cards {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: calc(var(--gutter) / 2);
