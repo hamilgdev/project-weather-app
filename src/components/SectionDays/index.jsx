@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useFetch } from "../../hooks/useFetch";
+import PropTypes from "prop-types";
 
 import CardWeatherDay from "../utils/CardWeatherDay";
 
 import "./index.scss";
 
-const SectionDays = () => {
+const SectionDays = ({ data, loading }) => {
   const [dayForecast, setDayForecast] = useState([]);
-  const { data, loading } = useFetch("Bogota");
-
   /*
    * 3 day forecast filtering
    */
@@ -48,6 +46,12 @@ const SectionDays = () => {
       </div>
     </section>
   );
+};
+
+// define proptypes
+SectionDays.propTypes = {
+  data: PropTypes.object,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default SectionDays;

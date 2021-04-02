@@ -1,13 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import { useFetch } from "../../hooks/useFetch";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 import "./index.scss";
 
-const Header = () => {
-  const { data, loading } = useFetch("Bogota");
-
+const Header = ({ data, loading }) => {
   return (
     <section className="Header">
       <div className="ContentNameWeatcher">
@@ -22,6 +20,12 @@ const Header = () => {
       </div>
     </section>
   );
+};
+
+// define proptypes
+Header.propTypes = {
+  data: PropTypes.object,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default Header;
