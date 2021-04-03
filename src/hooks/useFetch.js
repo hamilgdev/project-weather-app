@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { getWeather } from "../helpers/getWeather";
 
-export const useFetch = (request, type = "weather") => {
+export const useFetch = (call, request, type = "weather") => {
   const isMounted = useRef(true);
   const [state, setState] = useState({
     loading: true,
@@ -20,14 +20,14 @@ export const useFetch = (request, type = "weather") => {
       data: null,
     });
 
-    getWeather(request, type).then((data) => {
+    getWeather(call, request, type).then((data) => {
       setState({
         loading: false,
         error: null,
         data,
       });
     });
-  }, [request, type]);
+  }, [call, request, type]);
 
   return state;
 };

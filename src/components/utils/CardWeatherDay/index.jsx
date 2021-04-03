@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 import "./index.scss";
 
@@ -52,6 +53,13 @@ const CardWeatherDay = ({ dt_txt, weather, wtMain }) => {
       </div>
     </article>
   );
+};
+
+// define proptypes
+CardWeatherDay.propTypes = {
+  dt_txt: PropTypes.string.isRequired,
+  weather: PropTypes.array.isRequired,
+  wtMain: PropTypes.object.isRequired,
 };
 
 export default CardWeatherDay;

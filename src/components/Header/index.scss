@@ -17,7 +17,7 @@
     opacity: 0.6;
   }
 
-  .ContentNameWeatcher {
+  &--ContentNameWeatcher {
     margin: calc(var(--gutter) * 2);
     color: var(--c-first-lighter-100);
     position: relative;
@@ -27,7 +27,7 @@
       margin: calc(var(--gutter) * 4);
     }
 
-    .NameWeatcher {
+    &__NameWeatcher {
       display: inline-flex;
       align-items: center;
       gap: calc(var(--gutter) / 2);

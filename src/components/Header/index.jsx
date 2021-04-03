@@ -8,11 +8,11 @@ import "./index.scss";
 const Header = ({ data, loading }) => {
   return (
     <section className="Header">
-      <div className="ContentNameWeatcher">
+      <div className="Header--ContentNameWeatcher">
         {loading ? (
           <small>loading...</small>
         ) : (
-          <div className="NameWeatcher">
+          <div className="Header--ContentNameWeatcher__NameWeatcher">
             <FaMapMarkerAlt />
             <h1>{data.city.name}</h1>
           </div>

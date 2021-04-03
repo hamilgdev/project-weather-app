@@ -8,12 +8,13 @@ import SectionVisit from "./components/SectionVisit";
 import SectionFeatured from "./components/SectionFeatured";
 
 import "./App.scss";
+import SectionFetchWeather from "./components/SectionFetchWeather";
 
 const App = () => {
   const request = "Quibdo";
   // forecast, weather
-  const { data, loading } = useFetch(request, "forecast");
-  const gurrentWeather = useFetch(request, "weather");
+  const { data, loading } = useFetch("name", request, "forecast");
+  const gurrentWeather = useFetch("name", request, "weather");
 
   return (
     <main className="Main">
@@ -22,8 +23,7 @@ const App = () => {
       <SectionDays data={data} loading={loading} />
       <SectionVisit loading={loading} />
       <SectionFeatured loading={loading} />
-
-      <section className="SectionAside">SectionAside</section>
+      <SectionFetchWeather loading={loading} />
     </main>
   );
 };
