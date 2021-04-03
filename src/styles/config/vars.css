@@ -59,6 +59,7 @@
   --border-radius-redonde: 50px;
   --border-radius-semi: 30px;
   --border-radius-minor: 15px;
+  --border-radius-small: 5px;
   /* Box shadow */
   --box-shadow: 0 2px 8px var(--c-first-darker-100-25);
   --box-shadow-md: 0 4px 4px 0 var(--c-first-darker-100-25);

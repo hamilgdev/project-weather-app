@@ -1,31 +1,34 @@
 import React from "react";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 import "./index.scss";
+import DataInfoBanner from "../DataInfoBanner";
 
-const CardBannerVisit = ({ slides }) => {
-  const { src, title, location } = slides[0];
-
+const CardBannerVisit = ({ title, src, location }) => {
   return (
     <figure
       className="CardBanner"
       style={{
-        flex: 1,
+        flex: "1",
         backgroundImage: `url(${src})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
-      {/* <img src={src} alt={`${title} ${location}`} /> */}
       <div className="CardBanner--data">
-        <FaMapMarkerAlt />
-        <div className="CardBanner--data__info">
-          <span>{title}</span>
-          <small>{location}</small>
-        </div>
+        {/* Component <DataInfoBanner /> */}
+        <DataInfoBanner title={title} location={location} />
+        {/* END Component <DataInfoBanner /> */}
       </div>
     </figure>
   );
+};
+
+// define proptypes
+CardBannerVisit.propTypes = {
+  title: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
 };
 
 export default CardBannerVisit;

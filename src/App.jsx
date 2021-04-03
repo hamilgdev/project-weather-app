@@ -5,11 +5,12 @@ import FloatMenu from "./components/FloatMenu";
 import Header from "./components/Header";
 import SectionDays from "./components/SectionDays";
 import SectionVisit from "./components/SectionVisit";
+import SectionFeatured from "./components/SectionFeatured";
 
 import "./App.scss";
 
 const App = () => {
-  const request = "Bogota";
+  const request = "Quibdo";
   // forecast, weather
   const { data, loading } = useFetch(request, "forecast");
   const gurrentWeather = useFetch(request, "weather");
@@ -19,9 +20,9 @@ const App = () => {
       <FloatMenu gurrentWeather={gurrentWeather} />
       <Header data={data} loading={loading} />
       <SectionDays data={data} loading={loading} />
-      <SectionVisit />
+      <SectionVisit loading={loading} />
+      <SectionFeatured loading={loading} />
 
-      <section className="SectionTop">SectionTop</section>
       <section className="SectionAside">SectionAside</section>
     </main>
   );

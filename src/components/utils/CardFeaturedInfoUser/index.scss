@@ -1,0 +1,9 @@
+.CardFeaturedInfoUser {
+  &--figure {
+    width: calc(var(--gutter) * 2);
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+    border: 2px solid var(--c-accent-lighter);
+    margin-left: calc(var(--gutter) / 2 * -1);
+  }
+}

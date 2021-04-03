@@ -10,7 +10,7 @@
     "Header"
     "SectionDays"
     "SectionVisit"
-    "SectionTop"
+    "SectionFeatured"
     "SectionAside";
 
   @media only screen and (min-width: 1024px) {
@@ -20,7 +20,7 @@
     grid-template-rows: minmax(0, 300px) minmax(0, 1fr);
     grid-template-areas:
       "Header Header Header Header"
-      "SectionDays SectionVisit SectionTop SectionAside";
+      "SectionDays SectionVisit SectionFeatured SectionAside";
   }
 }
 
@@ -37,10 +37,16 @@
 
 .SectionVisit {
   grid-area: SectionVisit;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gutter) * 2);
 }
 
-.SectionTop {
-  grid-area: SectionTop;
+.SectionFeatured {
+  grid-area: SectionFeatured;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gutter) * 2);
 }
 
 .SectionAside {

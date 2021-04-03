@@ -1,14 +1,10 @@
 .SectionVisit {
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--gutter) * 2);
-
   &--title {
     font-weight: var(--regular);
   }
 
   &--banners {
-    flex: 1;
+    flex: 1 0 auto;
     display: flex;
   }
 }

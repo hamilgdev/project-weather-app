@@ -1,0 +1,28 @@
+.SectionFeatured {
+  &--top {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--gutter) / 2);
+      font-family: var(--second);
+      & h2 {
+        font-size: var(--fs-small);
+        font-weight: var(--regular);
+        color: var(--c-first-lighter-100);
+      }
+      & svg {
+        fill: var(--c-first-lighter-200);
+      }
+    }
+  }
+
+  &--banners {
+    flex: 1;
+    display: flex;
+    gap: var(--gutter);
+    flex-direction: column;
+  }
+}

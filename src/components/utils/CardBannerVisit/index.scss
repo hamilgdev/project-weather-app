@@ -2,6 +2,13 @@
   position: relative;
   border-radius: var(--border-radius-semi);
   overflow: hidden;
+  animation-name: ani-with-zoom;
+  animation-duration: 20s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  will-change: background-size;
+
   &::before {
     content: "";
     position: absolute;
@@ -13,18 +20,18 @@
     opacity: 0.55;
   }
   &--data {
-    display: flex;
-    align-items: flex-start;
-    gap: calc(var(--gutter) / 2);
     position: absolute;
     top: var(--gutter);
     left: var(--gutter);
     color: var(--c-accent-lighter);
-    line-height: 1;
-    &__info {
-      display: flex;
-      flex-direction: column;
-      gap: calc(var(--gutter) / 4);
+  }
+
+  @keyframes ani-with-zoom {
+    from {
+      background-size: 100% 100%;
+    }
+    to {
+      background-size: 125% 125%;
     }
   }
 }
