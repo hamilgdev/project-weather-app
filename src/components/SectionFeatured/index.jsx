@@ -10,8 +10,8 @@ import user01 from "../../assets/img/user01.jpg";
 import user02 from "../../assets/img/user02.jpg";
 import user03 from "../../assets/img/user03.jpg";
 
-import banner02 from "../../assets/img/banner02.jpg";
-import banner03 from "../../assets/img/banner03.jpg";
+import banner02 from "../../assets/img/banner_02.jpg";
+import banner03 from "../../assets/img/banner_03.jpg";
 
 import "./index.scss";
 
@@ -36,14 +36,14 @@ const usersReviews = [
 const SlideBanner = [
   {
     id: 1,
-    title: "Art Science",
-    location: "Museum",
+    title: "Las Cascadas",
+    location: "Tutunendo",
     src: banner02,
   },
   {
     id: 2,
-    title: "Fountain",
-    location: "of dubai",
+    title: "Atardecer",
+    location: "Malecón",
     src: banner03,
   },
 ];

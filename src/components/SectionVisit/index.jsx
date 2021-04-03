@@ -2,14 +2,14 @@ import React from "react";
 import CardBannerVisit from "../utils/CardBannerVisit";
 import PropTypes from "prop-types";
 
-import banner01 from "../../assets/img/banne01.jpg";
+import banner01 from "../../assets/img/banner_01.jpg";
 
 import "./index.scss";
 
 const SlideBanner = {
   id: 1,
-  title: "Arab Street",
-  location: "Singapore",
+  title: "Río Atrato",
+  location: "Quibdó",
   src: banner01,
 };
 
