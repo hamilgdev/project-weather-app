@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { Loader } from "../utils/Loader";
 import CardBannerVisit from "../utils/CardBannerVisit";
 import GridCardFeaturedInfoUser from "../utils/GridCardFeaturedInfoUser";
 
@@ -52,7 +53,7 @@ const SectionFeatured = ({ loading }) => {
   return (
     <section className="SectionFeatured">
       {loading ? (
-        <small>loading...</small>
+        <Loader />
       ) : (
         <>
           <div className="SectionFeatured--top">

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import { useFetch } from "../../hooks/useFetch";
 
+import { Loader } from "../utils/Loader";
 import CardWeatherFetch from "../utils/CardWeatherFetch";
 
 import "./index.scss";
@@ -15,7 +16,7 @@ const SectionFetchWeather = ({ loading }) => {
   return (
     <section className="SectionFetchWeather">
       {loading ? (
-        <small>loading...</small>
+        <Loader />
       ) : (
         <>
           <CardWeatherFetch request={req} />

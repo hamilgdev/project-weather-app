@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+import { Loader } from "../utils/Loader";
 import CardWeatherDay from "../utils/CardWeatherDay";
 
 import "./index.scss";
@@ -32,7 +33,7 @@ const SectionDays = ({ data, loading }) => {
       </h2>
       <div className="SectionDays--cards">
         {loading ? (
-          <small>loading...</small>
+          <Loader />
         ) : (
           dayForecast.map(({ dt_txt, weather, main }, index) => (
             <CardWeatherDay

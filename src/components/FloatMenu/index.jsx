@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+import { Loader } from "../utils/Loader";
 import "./index.scss";
 
 const FloatMenu = ({ gurrentWeather }) => {
@@ -25,7 +26,7 @@ const FloatMenu = ({ gurrentWeather }) => {
   return (
     <aside className="FloatMenu">
       {loading ? (
-        <small>loading...</small>
+        <Loader />
       ) : (
         <>
           <div className="FloatMenu--IconWeather">

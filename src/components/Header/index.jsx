@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { Loader } from "../utils/Loader";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 import "./index.scss";
@@ -10,7 +11,7 @@ const Header = ({ data, loading }) => {
     <section className="Header">
       <div className="Header--ContentNameWeatcher">
         {loading ? (
-          <small>loading...</small>
+          <Loader />
         ) : (
           <div className="Header--ContentNameWeatcher__NameWeatcher">
             <FaMapMarkerAlt />

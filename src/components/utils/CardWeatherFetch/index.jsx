@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+import { Loader } from "../Loader";
 import "./index.scss";
 
 const CardWeatherFetch = ({ request }) => {
@@ -25,7 +26,7 @@ const CardWeatherFetch = ({ request }) => {
   return (
     <article className="CardWeatherFetch">
       {loading ? (
-        <small>loading...</small>
+        <Loader />
       ) : (
         <>
           <header className="CardWeatherFetch--head">

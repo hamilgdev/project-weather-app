@@ -2,6 +2,7 @@ import React from "react";
 import CardBannerVisit from "../utils/CardBannerVisit";
 import PropTypes from "prop-types";
 
+import { Loader } from "../utils/Loader";
 import banner01 from "../../assets/img/banner_01.jpg";
 
 import "./index.scss";
@@ -21,7 +22,7 @@ const SectionVisit = ({ loading }) => {
       </h2>
       <div className="SectionVisit--banners">
         {loading ? (
-          <small>loading...</small>
+          <Loader />
         ) : (
           <CardBannerVisit
             title={SlideBanner.title}
