@@ -6,6 +6,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  animation-name: ani-with-zoom;
+  animation-duration: 25s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  will-change: background-position;
+
   &::after {
     content: "";
     position: absolute;
@@ -38,6 +45,12 @@
       @media only screen and (min-width: 1024px) {
         font-size: var(--fp-large);
       }
+    }
+  }
+
+  @keyframes ani-with-zoom {
+    to {
+      background-position: 100% 100%;
     }
   }
 }

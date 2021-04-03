@@ -13,6 +13,7 @@ const CardBannerVisit = ({ title, src, location }) => {
         backgroundImage: `url(${src})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        backgroundPosition: "50% 50%",
       }}
     >
       <div className="CardBanner--data">

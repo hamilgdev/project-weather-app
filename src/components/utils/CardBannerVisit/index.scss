@@ -2,12 +2,13 @@
   position: relative;
   border-radius: var(--border-radius-semi);
   overflow: hidden;
+
   animation-name: ani-with-zoom;
-  animation-duration: 20s;
+  animation-duration: 25s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  will-change: background-size;
+  will-change: background-position;
 
   &::before {
     content: "";
@@ -27,11 +28,8 @@
   }
 
   @keyframes ani-with-zoom {
-    from {
-      background-size: 100% 100%;
-    }
     to {
-      background-size: 125% 125%;
+      background-position: 100% 100%;
     }
   }
 }
